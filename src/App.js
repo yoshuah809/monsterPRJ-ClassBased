@@ -1,6 +1,7 @@
 import "./styles.css";
 import { Component } from "react";
 import CardList from "./components/card-list/card-list.component";
+import SearchBox from "./components/search-box/search-box.component";
 
 class App extends Component {
   constructor() {
@@ -43,14 +44,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="form-group  container mt-4 sm">
-          <input
-            type="search"
-            className="form-control"
-            placeholder="Search Monsters"
-            onChange={onSearchChange}
-          />
-        </div>
+        <SearchBox onSearchChange={onSearchChange} />
 
         <CardList monsters={filteredMonsters} />
         {/* <button className="btn btn-outline-primary">Change Name</button> */}
