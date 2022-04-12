@@ -47,13 +47,13 @@ class App extends Component {
           <input
             type="search"
             className="form-control"
-            placeholder="search monsters"
+            placeholder="Search Monsters"
             onChange={onSearchChange}
           />
         </div>
 
-        <CardList />
-        <button className="btn btn-outline-primary">Change Name</button>
+        <CardList monsters={filteredMonsters} />
+        {/* <button className="btn btn-outline-primary">Change Name</button> */}
       </div>
     );
   }

@@ -2,16 +2,16 @@ import { Component } from "react";
 
 class CardList extends Component {
   render() {
+    const { monsters } = this.props;
     return (
       <div>
-        CardList Component
-        {/* {filteredMonsters.map((monster) => {
+        {monsters.map((monster) => {
           return (
             <h4 key={monster.id}>
-              {monster.id}-{monster.name}--{monster.username}
+              {monster.id}-{monster.name}
             </h4>
           );
-        })} */}
+        })}
       </div>
     );
   }
