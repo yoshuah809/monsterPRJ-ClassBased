@@ -1,5 +1,6 @@
 import "./styles.css";
 import { Component } from "react";
+import CardList from "./components/card-list/card-list.component";
 
 class App extends Component {
   constructor() {
@@ -50,13 +51,8 @@ class App extends Component {
             onChange={onSearchChange}
           />
         </div>
-        {filteredMonsters.map((monster) => {
-          return (
-            <h4 key={monster.id}>
-              {monster.id}-{monster.name}--{monster.username}
-            </h4>
-          );
-        })}
+
+        <CardList />
         <button className="btn btn-outline-primary">Change Name</button>
       </div>
     );
